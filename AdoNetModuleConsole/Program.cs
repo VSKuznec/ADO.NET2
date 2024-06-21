@@ -1,9 +1,10 @@
 ﻿using System.Data;
 using AdoNetModuleConsole;
+using ADO.NET2;
 
 namespace AdoNetModuleConsole
 {
-    internal class Program
+    class Program
     {
         public static void Main(string[] args)
         {

@@ -6,16 +6,15 @@ namespace ADO.NET2
 {
     public class MainConnector
     {
-        readonly SqlConnection connection = new SqlConnection(ConnectionString.MsSqlConnection);
+        readonly SqlConnection connection = new SqlConnection(ADO.NET2.Configurations.ConnectionString.MsSqlConnection);
 
         public SqlConnection Connection => connection;
 
-        public async Task<bool> ConnectAsync(SqlConnection connection)
+        public async Task<bool> ConnectAsync()
         {
             bool result;
             try
-            {
-                connection = new SqlConnection(ConnectionString.MsSqlConnection);
+            {   
                 await connection.OpenAsync();
                 result = true;
             }
